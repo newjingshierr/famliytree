@@ -1,0 +1,30 @@
+{
+  "name": "famliytree",
+  "version": "1.0.0",
+  "description": "famliytree",
+  "scripts": {
+    "start": "webpack"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/newjingshierr/famliytree.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/newjingshierr/famliytree/issues"
+  },
+  "homepage": "https://github.com/newjingshierr/famliytree#readme",
+  "devDependencies": {
+    "awesome-typescript-loader": "^3.1.3",
+    "source-map-loader": "^0.2.1",
+    "typescript": "^2.3.4",
+    "webpack": "^2.6.1"
+  },
+  "dependencies": {
+    "@types/react": "^15.0.25",
+    "@types/react-dom": "^15.5.0",
+    "react": "^15.5.4",
+    "react-dom": "^15.5.4"
+  }
+}

@@ -1,0 +1,23 @@
+# dependencies
+/node_modules
+/dist
+.idea/
+
+# testing
+/coverage
+
+# production
+/build
+
+# misc
+.DS_Store
+.env
+npm-debug.log*
+src/themes/document_BACKUP_18276.less
+src/themes/document_BASE_18276.less
+src/themes/document_LOCAL_18276.less
+src/themes/document_REMOTE_18276.less
+
+*.iml
+*.log
+/.awcache
