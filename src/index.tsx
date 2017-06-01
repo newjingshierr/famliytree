@@ -3,7 +3,8 @@ import * as ReactDOM from "react-dom";
 
 import { Hello } from "../components/Hello";
 
+console.log("start");
 ReactDOM.render(
-    <div>11111</div>,
+    <Hello compiler="compiler" framework="framework" />,
     document.getElementById("example")
 );
