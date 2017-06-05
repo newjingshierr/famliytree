@@ -6,11 +6,14 @@ import {Input, Icon} from 'antd';
 const Search = Input.Search;
 import {Card} from 'antd';
 import SearchIndex from './components/search';
+import ButtonIndex from './components/changeButton';
 
 
 ReactDOM.render(
     <Layout>
-        <Header style={{backgroundColor:'#16b0de'}}> <SearchIndex/>
+        <Header style={{backgroundColor:'#16b0de'}}>
+            <ButtonIndex/>
+            <SearchIndex searchProps="11"/>
             <Icon type="user"/><Icon type="heart-o"/></Header>
         <Content><Card style={{ width: 240 }} bodyStyle={{ padding: 0 }}>
             <div className="custom-image">
