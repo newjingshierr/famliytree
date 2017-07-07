@@ -15,6 +15,7 @@ var env = 'development';
 // const __DEV__ = config.env === 'development';
 var is_local = process.env.NODE_ENV === 'local';
 var is_dev = process.env.NODE_ENV === 'development' || is_local;
+is_dev = true;
 
 
 // let target = 'http://114.55.86.252:8080/mockjs/1/'; let target =
@@ -96,6 +97,8 @@ var publicPath = "./dist/";
 var cdn = "./dist/";
 var iconOSS = "//akmii-icon.oss-cn-shanghai.aliyuncs.com/";
 
+console.log('current env',process.env.NODE_ENV);
+
 if (process.env.NODE_ENV === 'uat') {
     publicPath = "//cdn.yungalaxy.com/yeeoffice/uat/ver1.2/js/project3.0/";
     cdn = "//cdn.yungalaxy.com/yeeoffice/uat/ver1.2/";
@@ -127,7 +130,7 @@ module.exports = {
         publicPath: is_dev ?
             'http://127.0.0.1:' + port + '/' : publicPath,
         filename: is_dev ?
-            '[name].js' : '[name].js',
+            'bundle.js' : 'bundle.js',
         chunkFilename: is_dev ?
             '[name].js' : '[name]-' + process.env.NODE_ENV + '-[hash:5].js'
     },

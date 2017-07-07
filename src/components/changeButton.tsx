@@ -1,13 +1,16 @@
 import * as React from "react";
 import { Button } from 'antd';
 import SearchIndex from './search';
+import Api from '../api/common';
+import {product} from '../api/common';
+import {ResponseData} from '../api/common';
 
 
 interface SearchProps {
 
 }
 interface SearchState {
-  i:string;
+
 }
 
 export default class ButtonIndex extends React.Component<SearchProps, SearchState> {
@@ -16,9 +19,7 @@ export default class ButtonIndex extends React.Component<SearchProps, SearchStat
 
     constructor(props, context) {
         super(props, context);
-        this.state = {
-            i :"11"
-        }
+
     }
 
     componentWillReceiveProps(){
@@ -34,23 +35,22 @@ export default class ButtonIndex extends React.Component<SearchProps, SearchStat
 
     }
     change(){
-        console.log("change");
 
 
-        setInterval(()=>{
-
-              this.setState({i:String(this.j++)})
-
-        },1000);
     }
 
 
     render() {
 
+        var products: product[];
+        var responseData:ResponseData<product[]>;
+        Api.service.get().then((data:product[])=>{
+        });
+
         return(
         <div>
             <Button type="primary" onClick={this.change.bind(this) }>Primary</Button>
-            <SearchIndex  searchProps ={this.state.i}/>
+            <SearchIndex />
         </div>)
 
     }
